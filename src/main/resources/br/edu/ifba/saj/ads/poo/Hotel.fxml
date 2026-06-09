@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="280.0" prefWidth="600.0"
+    xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="br.edu.ifba.saj.ads.poo.HotelController">
+   <children>
+      <Label alignment="CENTER" prefWidth="600.0" text="Cadastro de Hotéis"
+             AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font><Font size="35.0"/></font>
+      </Label>
+      <Label layoutX="14.0" layoutY="55.0" text="Nome:" />
+      <TextField fx:id="txNome" layoutY="51.0"
+                 AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="51.0"/>
+      <Label layoutX="14.0" layoutY="89.0" text="Endereço:" />
+      <TextField fx:id="txEndereco" layoutY="85.0"
+                 AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="85.0"/>
+      <Button defaultButton="true" onAction="#salvar" text="Salvar"
+              AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="115.0"/>
+      <TableView fx:id="tbHoteis"
+                 AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0"
+                 AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="150.0">
+        <columns>
+          <TableColumn fx:id="clmNome" text="Nome" prefWidth="350.0"/>
+          <TableColumn fx:id="clmEndereco" text="Endereço" prefWidth="200.0"/>
+        </columns>
+        <columnResizePolicy>
+          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+        </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>
